@@ -6,7 +6,7 @@ export default async function Home() {
 
   const currentUser = await fetchAuthUserAction();
   
-  if(currentUser?.success){
+  if(!currentUser?.success){
     redirect("/sign-in");
   }
   return (
